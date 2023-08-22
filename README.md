@@ -1,1 +1,22 @@
-# empleadosPublicos
+## Indice
+***
+* [Introduccion](#introduccion)
+  * [Instalacion de Software](#instalacion-de-software)
+    + [Instalacion de Python](#instalacion-de-python)
+    + [Instalacion de GitHub](#instalacion-de-github)
+    + [Instalacion de Chrome y Chromedriver](#instalacion-de-chrome-y-chromedriver)
+      - [Instalacion de Chrome](#instalacion-de-chrome)
+      - [Instalacion de Chromedriver](#instalacion-de-chromedriver)
+    + [Instalacion de Dependencias](#instalacion-de-dependencias)
+    + [Instalacion PostgreSQL - exclusivo del maestro](#instalacion-postgresql---exclusivo-del-maestro)
+  * [Configuracion de Las Maquinas](#configuracion-de-las-maquinas)
+    + [Configurar Variables de Ambiente](#configurar-variables-de-ambiente)
+    + [Crear Tablas Base de Datos](#crear-tablas-base-de-datos)
+    + [Actualizar Copia Local del Codigo](#actualizar-copia-local-del-codigo)
+    + [Instalar Servicios](#instalar-servicios)
+    + [Instalar Cronjobs](#instalar-cronjobs)
+  * [Logging](#logging)
+    + [Cambiar Nivel del Log](#cambiar-nivel-del-log)
+    + [Activar Output en la Consola](#activar-output-en-la-consola)
+  * [Query de Reasignación Manual de Casos](#query-de-reasignaci-n-manual-de-casos)
+***
