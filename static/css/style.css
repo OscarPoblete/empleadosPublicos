@@ -1,0 +1,29 @@
+/* static/css/style-css */
+body {
+    background-color: #F0F0F0;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.container img {
+    width: 50px;
+    margin-bottom: 25px;
+    margin-top: 1px;
+}
+
+.container-fluid {
+    background-color: #103992;
+    padding: 20px;
+    margin: 0 auto;
+    color: white;
+}
+
