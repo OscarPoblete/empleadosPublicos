@@ -21,9 +21,12 @@ body {
 }
 
 .container-fluid {
-    background-color: #103992;
+    background-color: #0A2D44;
     padding: 20px;
     margin: 0 auto;
     color: white;
 }
 
+.navbar {
+    width: 100%;
+}
