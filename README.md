@@ -57,6 +57,22 @@ Cada vez que se requiera correr algún código del programa, debe hacerse DESDE 
 que se abra la consola y se ejecute código python).
 ***
 
+### Instalacion de Apache
+ Instalar Apache:
+
+    sudo apt update
+    sudo apt install apache2
+    sudo ufw app list
+    sudo ufw allow 'Apache'
+    sudo ufw status
+    sudo systemctl status apache2
+
+ Comprobar Apache:
+
+    hostname -I
+
+    curl -4 icanhazip.com
+    
 ### Instalacion de GitHub
 
 Instalar y configurar GitHub:
@@ -76,7 +92,7 @@ Agregar la llave SSH generada a tu cuenta de GitHub:
 
 Clonar repositorio
 
-    git clone 
+    git clone git@github.com:OscarPoblete/empleadosPublicos.git
 ***
 ### Instalacion de Chrome y Chromedriver
 Acá hay [instrucciones detalladas](https://skolo.online/documents/webscrapping/#step-1-download-chrome)
