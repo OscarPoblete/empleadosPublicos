@@ -1,23 +1,53 @@
 /* static/css/style-css */
 body {
     background-color: #F0F0F0;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
     background-color: #fff;
     padding: 20px;
-    border-radius: 10px;
     width: 100%;
     max-width: 400px;
     margin: 0 auto;
     text-align: center;
-    margin-top: 5px;
-    margin-bottom: 10px;
 }
+
+#menu-horizontal{
+    background-color: #0A2D44;
+    padding: 10px;
+    margin: 0 auto;
+    color: white;
+}
+
+.boton-imagen{
+    cursor: pointer;
+    position:fixed;
+}
+
+.boton-imagen img{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+#menu-horizontal img{
+    width: 30px;
+    transform: translateY(0%);
+}
+
+.texto{
+    text-align: right;
+    font-size: 15px;
+    transform: translateY(-100%);
+    padding: 0;
+}
+
+
 .container img {
-    width: 50px;
-    margin-bottom: 25px;
-    margin-top: 1px;
+    width: 20px;
+    padding: 10;
 }
 
 .container-fluid {
@@ -25,8 +55,121 @@ body {
     padding: 20px;
     margin: 0 auto;
     color: white;
+    top: 0;
 }
 
-.navbar {
+.container-lg {
+    background-color: #0A2D44;
+    padding: 15px;
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+    font-family: Verdana, 'Geneva', Tahoma, sans-serif; 
+}
+
+.container-menu{
+    margin: 0;
+}
+
+.logo-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imagen-wrapper{
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+    margin-right: 10px;
+    transform: translateY(-25%);
+}
+
+.imagen-text{
+    margin-left: 10px;
+    top: 50%;
+    transform: translateY(-25%);
+}
+
+a,
+a:hover,
+a:focus{
+    color: inherit;
+    text-decoration: none;
+}
+
+.alinear{
+    display: flex;
     width: 100%;
+}
+
+#menu-vertical{
+    width: 250px;
+    background-color: #0f4466;
+    color: white;
+    width: 15%;
+    height: 100vh;
+    background-color: #0f4466;
+    left: 0;
+}
+
+#menu-vertical ul li a{
+    padding: 10px;
+    font-size: 20px;
+    display: block;
+    padding-left: 15px;
+}
+
+#menu-vertical ul li a:hover{
+    background-color: white;
+    color: #0A2D44;
+}
+
+.mantenedor-container{
+    margin: 20px auto;
+    width: 800px;
+}
+
+table{
+    background-color: gray;
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+th,td{
+    padding: 20px;
+}
+
+thead{
+    background-color: #0f4466;
+    border-bottom: solid 5px;
+    color: white;
+}
+
+
+.modal{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.modal-content{
+    padding: 10px;
+    width: 300px;
+    height: 200px;
+    margin: 0 auto;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    opacity: 0.9;
 }

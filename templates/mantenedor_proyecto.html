@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/acciones.js') }}"></script>
+</head>
+<body>
+  <nav id="menu-horizontal">
+    <a href="{{url_for('main_page')}}" class="boton-imagen"><img src="{{ url_for('static', filename='img/gesintel.png')}}" alt="Imagen" id="logo">Gesintel Compliance</a>
+  <center>Usuario: {{ username }}</center>
+  <div class="texto">
+    <a href="{{url_for('logout')}}">Cerrar Sesión</a>
+  </div>
+  </nav>
+    <div class="alinear">
+      <nav id="menu-vertical">
+        <ul class="list-unstyled">
+          <li><a href="#">Proyectos</a></li>
+          <li><a href="#">Templates</a></li>
+          <li><a href="#">Destinos</a></li>
+          <li><a href="#" id="mostrarMenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Mantenedor</a>
+            <ul class="collapse list-unstyled" id="mantenedor">
+              <li><a href="{{url_for('mantenedor_page')}}">Proyectos</a></li>
+              <li><a href="#">Templates</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <div class="mantenedor-container">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Descripcion del Proyecto</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for proyecto in proyectos %}
+            <tr>
+              <td>{{ proyecto[0] }}</td>
+              <td>{{ proyecto[1] }} </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+        <button id="btnAgregar" class="btn btn-primary">Agregar</button>
+        <div id="modal" class="modal">
+          <div class="modal-content">
+            <form id="formularioAgregar" method="POST" action="/add_proyecto" onsubmit="return mostrarConfirmacion();">
+              <label for="nombreProyecto">Descripción proyecto: </label>
+              <input type="text" name="proyecto_descrip" required><br>
+              <button type="submit">Guardar</button>
+              <button type="button" id="btnCancelar">Cancelar</button>
+            </form>
+          </div>
+        </div>
+        <div id="confirmacion" class="confirmacion-oculta">
+          <div class="confirmacion-contenido">
+            <p>¿Estás seguro?</p>
+            <button onclick="confirmacionAccion(true)">Sí</button>
+            <button onclick="confirmacionAccion(false)">No</button>
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+</html>
